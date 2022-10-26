@@ -1,1 +1,1 @@
-email-recipients: 'bjorn.olssonagren@nordicmedtest.se'
+skip-tests: '-DskipTests=true'
