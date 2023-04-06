@@ -11,7 +11,7 @@ spec:
     - port: {{ . }}
       targetPort: aggservices
       protocol: TCP
-      name: aggServices-{{ . }}
+      name: {{ quote . }}
     {{- end }}
 
 status:
