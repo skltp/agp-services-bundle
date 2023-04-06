@@ -1,6 +1,9 @@
 container:
   repository: docker.drift.inera.se/ntjp/
 
+skltp:
+  instanceId: SKLTP-DEFAULT-ID
+
 aggServices:
   name: ind-dtjp-agp-vip
   ports:

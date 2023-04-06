@@ -29,7 +29,7 @@ data:
   aggregate.timeout: "28000"
   
   # Outpoing parameters for calling services
-  vp.instanceId: NTjP_T_SERVICES_SE165565594230-10BR
+  vp.instanceId: {{ .Values.skltp.instanceId }}
   vp.defaultReceiveTimeout: "27000"
   vp.defaultConnectTimeout: "2000"
   vp.defaultServiceURL: http://${vp.host}:${vp.port}/vp
@@ -37,7 +37,7 @@ data:
   
   # Outgoing parameters for calling EI-FindContent
   ei.logicalAddress: "5565594230"
-  ei.senderId: T_SERVICES_SE165565594230-10BR
+  ei.senderId: {{ .Values.skltp.instanceId }}
   ei.findContentUrl: http://${ei.host}:${ei.port}/skltp-ei/find-content-service/v1
   ei.connectTimeout: "2000"
   ei.receiveTimeout: "20000"
