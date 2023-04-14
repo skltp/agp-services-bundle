@@ -13,7 +13,7 @@ data:
   ei.port: "8082"
   
   tak.host: "tak-services-svc"
-  tak.port: "8085"
+  tak.port: "8080"
   
   # Installation basepath
   base.path: /opt/agp
