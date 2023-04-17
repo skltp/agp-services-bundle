@@ -18,7 +18,7 @@ spec:
         - name: regcred
       containers:
         - name: agp
-          image: "{{ .Values.container.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
+          image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
           ports:
             - containerPort: 9001
               name: aggservices
