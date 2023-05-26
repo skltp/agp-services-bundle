@@ -22,7 +22,7 @@ data:
   vp.instanceId: {{ .Values.skltp.instanceId }}
   vp.defaultReceiveTimeout: "27000"
   vp.defaultConnectTimeout: "2000"
-  vp.defaultServiceURL: http:/vp:8080/vp
+  vp.defaultServiceURL: http://vp:8080/vp
   vp.useAyncHttpConduit: "true"
   
   # Outgoing parameters for calling EI-FindContent
