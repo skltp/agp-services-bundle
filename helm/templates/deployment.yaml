@@ -1,0 +1,70 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  annotations:
+  name: agp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: agp
+  template:
+    metadata:
+      annotations:
+      labels:
+        app.kubernetes.io/name: agp
+    spec:
+      imagePullSecrets:
+        - name: regcred
+      containers:
+        - name: agp
+          image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
+          ports:
+            - containerPort: 9001
+              name: aggservices
+            - containerPort: 8080
+              name: status
+            - containerPort: 8091
+              name: reset-cache
+          livenessProbe:
+            failureThreshold: 15
+            httpGet:
+              path: status
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 60
+            periodSeconds: 20
+            successThreshold: 1
+            timeoutSeconds: 5
+          readinessProbe:
+            failureThreshold: 3
+            httpGet:
+              path: status
+              port: 8080
+              scheme: HTTP
+            initialDelaySeconds: 30
+            periodSeconds: 10
+            successThreshold: 1
+            timeoutSeconds: 2
+          resources:
+            limits:
+              cpu: 800m
+              memory: 800Mi
+            requests:
+              cpu: 200m
+              memory: 401Mi
+          terminationMessagePath: /dev/termination-log
+          terminationMessagePolicy: File
+          envFrom:
+            {{- range $.Values.environment.variables._default_config_maps }}
+            - configMapRef:
+                name: {{ . }}
+            {{- end }}
+            {{- range $.Values.environment.variables.config_maps }}
+            - configMapRef:
+                name: {{ . }}
+            {{- end }}
+            {{- range $.Values.environment.variables.secrets }}
+            - secretRef:
+                name: {{ . }}
+            {{- end }}

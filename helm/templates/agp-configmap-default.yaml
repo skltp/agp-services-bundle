@@ -1,0 +1,52 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: agp-configmap-default
+data:
+  server.port: "8089"
+  
+  # Installation basepath
+  base.path: /opt/agp
+  
+  # Hawtio
+  hawtio.authenticationEnabled: "false"
+  
+  # Camel spring-boot configurations
+  camel.springboot.message-history: "false"
+  camel.springboot.tracing: "false"
+  
+  # Total timeout for aggregated calls to producers
+  aggregate.timeout: "28000"
+  
+  # Outpoing parameters for calling services
+  vp.instanceId: {{ .Values.skltp.instanceId }}
+  vp.defaultReceiveTimeout: "27000"
+  vp.defaultConnectTimeout: "2000"
+  vp.defaultServiceURL: http://vp:8080/vp
+  vp.useAyncHttpConduit: "true"
+  
+  # Outgoing parameters for calling EI-FindContent
+  ei.logicalAddress: "5565594230"
+  ei.senderId: {{ .Values.skltp.instanceId }}
+  ei.findContentUrl: http://ei-backend:8082/skltp-ei/find-content-service/v1
+  ei.connectTimeout: "2000"
+  ei.receiveTimeout: "20000"
+  ei.useAyncHttpConduit: "true"
+  
+  # Other services URLs
+  reset.cache.url: http://0.0.0.0:8091/resetcache
+  agp.status.url: http://0.0.0.0:8080/status
+  
+  #Takcache configuration
+  takcache.use.behorighet.cache: "true"
+  takcache.use.vagval.cache: "false"
+  takcache.persistent.file.name: ${base.path}/localCache
+  takcache.endpoint.address: http://tak-services-svc:8080/tak-services/SokVagvalsInfo/v2
+  
+  # Max size of payload loggings
+  log.max.payload.size: "49152"
+  
+  # Service special configuration
+  getaggregatedrequestactivities.v1.receiveTimeout: "15000"
+  getaggregatedrequestactivities.v2.receiveTimeout: "15000"
+  getaggregatedsubjectofcareschedule.v1.receiveTimeout: "15000"
