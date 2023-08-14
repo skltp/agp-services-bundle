@@ -29,23 +29,23 @@ spec:
           livenessProbe:
             failureThreshold: 15
             httpGet:
-              path: status
-              port: 8080
+              path: actuator/health/liveness
+              port: 8089
               scheme: HTTP
             initialDelaySeconds: 60
             periodSeconds: 20
             successThreshold: 1
             timeoutSeconds: 5
           readinessProbe:
-            failureThreshold: 3
+            failureThreshold: 10
             httpGet:
-              path: status
-              port: 8080
+              path: actuator/health/readiness
+              port: 8089
               scheme: HTTP
             initialDelaySeconds: 30
             periodSeconds: 10
             successThreshold: 1
-            timeoutSeconds: 2
+            timeoutSeconds: 5
           resources:
             limits:
               cpu: 800m
