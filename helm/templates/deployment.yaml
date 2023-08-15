@@ -16,6 +16,7 @@ spec:
     spec:
       imagePullSecrets:
         - name: regcred
+      terminationGracePeriodSeconds: 90
       containers:
         - name: agp
           image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
@@ -30,7 +31,6 @@ spec:
             preStop:
               exec:
                 command: ["sleep", "10"]
-          terminationGracePeriodSeconds: 60
           livenessProbe:
             failureThreshold: 15
             httpGet:
