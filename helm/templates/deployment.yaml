@@ -26,13 +26,18 @@ spec:
               name: status
             - containerPort: 8091
               name: reset-cache
+          lifecycle:
+            preStop:
+              exec:
+                command: ["sleep", "10"]
+          terminationGracePeriodSeconds: 60
           livenessProbe:
             failureThreshold: 15
             httpGet:
               path: actuator/health/liveness
               port: 8089
               scheme: HTTP
-            initialDelaySeconds: 60
+            initialDelaySeconds: 90
             periodSeconds: 20
             successThreshold: 1
             timeoutSeconds: 5
@@ -42,7 +47,7 @@ spec:
               path: actuator/health/readiness
               port: 8089
               scheme: HTTP
-            initialDelaySeconds: 30
+            initialDelaySeconds: 40
             periodSeconds: 10
             successThreshold: 1
             timeoutSeconds: 5
