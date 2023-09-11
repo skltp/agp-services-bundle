@@ -1,5 +1,9 @@
 repository: docker.drift.inera.se/ntjp/
 
+deployment:
+  replicaCount: 1
+  elasticGrokFilter: camel
+
 skltp:
   instanceId: SKLTP-DEFAULT-ID
 
