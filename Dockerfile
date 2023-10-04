@@ -2,7 +2,8 @@ FROM openjdk:11-oraclelinux8
 
 ENV BASE_DIR=/opt/agp/ \
     USER=ind-app \
-    LOG_DIR=/var/log/
+    LOG_DIR=/var/log/ \
+    TZ=Europe/Stockholm
 
 COPY target/ ${BASE_DIR}
 
