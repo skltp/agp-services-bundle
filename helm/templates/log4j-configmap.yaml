@@ -1,0 +1,44 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  creationTimestamp: null
+  name: log4j
+data:
+  log4j2.xml: |
+    <Configuration status="WARN" monitorInterval="30">
+
+      <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+          <EcsLayout/>
+        </Console>
+      </Appenders>
+
+      <Loggers>
+        <AsyncLogger name="se.skltp.aggregatingservices" level="WARN"/>
+
+        <!--Jetty-->
+        <Logger name="org.eclipse.jetty" level="WARN"/>
+
+        <!--Level INFO will log the init/reset och TAK cache-->
+        <AsyncLogger name="se.skltp.takcache" level="INFO"/>
+        <AsyncLogger name="se.skl.tp.vp.vagval.ResetTakCacheProcessor" level="INFO"/>
+
+
+        <!--Level INFO will log startup for spring boot application-->
+        <AsyncLogger name="se.skltp.aggregatingservices.AgpApplication" level="INFO"/>
+
+        <!--Apache camel-->
+        <AsyncLogger name="org.apache.camel" level="INFO"/>
+
+        <!-- Message logging -->
+        <AsyncLogger name="se.skltp.aggregatingservices.logging" level="INFO"/>
+        <AsyncLogger name="se.skltp.aggregatingservices.logging.FindContentResponderInterface" level="DEBUG"/>
+
+
+        <AsyncRoot level="WARN">
+          <!--<AppenderRef ref="RollingRandomAccessFile"/>-->
+          <AppenderRef ref="Console"/>
+        </AsyncRoot>
+
+      </Loggers>
+    </Configuration>
