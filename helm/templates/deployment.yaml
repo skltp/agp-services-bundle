@@ -29,7 +29,7 @@ spec:
         - name: agp
           image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
           volumeMounts:
-            - mountPath: {{ .Values.log4j.file }}
+            - mountPath: {{ .Values.log4j.cfgFile }}
               name: log4j
               subPath: {{ .Values.log4j.configMap.file }}
           ports:
