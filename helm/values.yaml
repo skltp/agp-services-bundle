@@ -26,3 +26,5 @@ environment:
 
 log4j:
   cfgFile: /etc/agp/log4j2.xml
+  configMap:
+    file: log4j2.xml
