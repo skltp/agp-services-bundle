@@ -15,12 +15,23 @@ spec:
         app.kubernetes.io/name: agp
         elasticGrokFilter: {{ .Values.deployment.elasticGrokFilter }}
     spec:
+      volumes:
+        - configMap:
+            items:
+              - key: {{ .Values.log4j.configMap.file }}
+                path: {{ .Values.log4j.configMap.file }}
+            name: log4j
+          name: log4j
       imagePullSecrets:
         - name: regcred
       terminationGracePeriodSeconds: 90
       containers:
         - name: agp
           image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
+          volumeMounts:
+            - mountPath: {{ .Values.log4j.file }}
+              name: log4j
+              subPath: {{ .Values.log4j.configMap.file }}
           ports:
             - containerPort: 9001
               name: aggservices
