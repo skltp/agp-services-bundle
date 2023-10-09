@@ -50,3 +50,4 @@ data:
   getaggregatedrequestactivities.v1.receiveTimeout: "15000"
   getaggregatedrequestactivities.v2.receiveTimeout: "15000"
   getaggregatedsubjectofcareschedule.v1.receiveTimeout: "15000"
+  logging.config: {{ .Values.log4j.cfgFile }}
