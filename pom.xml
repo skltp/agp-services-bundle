@@ -88,6 +88,7 @@
                 <artifactItem>
                   <groupId>se.skltp.agp</groupId>
                   <artifactId>agp-application</artifactId>
+                  <version>LATEST</version>
                   <classifier>exec</classifier>
                   <destFileName>agp-application.jar</destFileName>
                 </artifactItem>
