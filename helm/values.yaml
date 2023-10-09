@@ -23,3 +23,6 @@ environment:
     # Override to supply your own maps.
     secrets:
     # Override to supply your own secrets.
+
+log4j:
+  cfgFile: /etc/agp/log4j2.xml
