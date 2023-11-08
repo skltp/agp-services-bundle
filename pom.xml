@@ -199,7 +199,7 @@
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedCareDocumentation-v3-main</artifactId>
-                  <version>1.0.0-RC7</version>
+                  <version>1.0.0</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
