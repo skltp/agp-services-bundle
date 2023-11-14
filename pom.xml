@@ -6,7 +6,7 @@
 
   <groupId>se.skltp.agp</groupId>
   <artifactId>agp-services-bundle</artifactId>
-  <version>3.2.1.0-RC1</version>
+  <version>3.2.1.0-RC2-SNAPSHOT</version>
   <description>AgP application with aggregating services</description>
   <name>agp-services-bundle</name>
 
@@ -41,7 +41,7 @@
     <url>http://github.com/skltp/agp-services-bundle</url>
     <connection>scm:git:https://github.com:443/skltp/agp-services-bundle.git</connection>
     <developerConnection>scm:git:https://github.com:443/skltp/agp-services-bundle.git</developerConnection>
-    <tag>v3.2.1.0-RC1</tag>
+    <tag>HEAD</tag>
   </scm>
 
   <build>
