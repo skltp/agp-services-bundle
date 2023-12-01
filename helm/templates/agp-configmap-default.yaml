@@ -4,7 +4,8 @@ metadata:
   name: agp-configmap-default
 data:
   server.port: "8089"
-  
+  logging.config: /etc/agp/log4j2.xml
+
   # Installation basepath
   base.path: /opt/agp
   
@@ -50,4 +51,3 @@ data:
   getaggregatedrequestactivities.v1.receiveTimeout: "15000"
   getaggregatedrequestactivities.v2.receiveTimeout: "15000"
   getaggregatedsubjectofcareschedule.v1.receiveTimeout: "15000"
-  logging.config: {{ .Values.log4j.cfgFile }}

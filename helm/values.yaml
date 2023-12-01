@@ -25,6 +25,13 @@ environment:
     # Override to supply your own secrets.
 
 log4j:
-  cfgFile: /etc/agp/log4j2.xml
-  configMap:
-    file: log4j2.xml
+  loggers:
+    - name: se.skltp.aggregatingservices
+      level: INFO
+    - name: se.skltp.takcache
+      level: INFO
+    - name: se.skltp.aggregatingservices.logging
+      level: INFO
+    - name: se.skltp.aggregatingservices.logging.FindContentResponderInterface
+      level: DEBUG
+  rootLoggerLevel: WARN
