@@ -18,7 +18,7 @@ spec:
       volumes:
         - name: log4j
           configMap:
-            name: log4j
+            name: agp-log4j
       imagePullSecrets:
         - name: regcred
       terminationGracePeriodSeconds: 90
