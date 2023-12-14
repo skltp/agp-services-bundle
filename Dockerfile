@@ -13,4 +13,5 @@ RUN mkdir -p ${LOG_DIR} \
 
 WORKDIR ${BASE_DIR}
 USER ${USER}
-CMD java -Dloader.path="services/" -Dspring.profiles.active=bundle -jar agp-application.jar
+# A few args are default, but feel free to add more using JAVA_OPTS
+CMD java -Dloader.path="services/" -Dspring.profiles.active=bundle ${JAVA_OPTS} -jar agp-application.jar
