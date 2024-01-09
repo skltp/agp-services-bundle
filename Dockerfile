@@ -14,4 +14,4 @@ RUN mkdir -p ${LOG_DIR} \
 WORKDIR ${BASE_DIR}
 USER ${USER}
 # A few args are default, but feel free to add more using JAVA_OPTS
-CMD java -Dloader.path="services/" -Dspring.profiles.active=bundle ${JAVA_OPTS} -jar agp-application.jar
+CMD java -XX:MaxRAMPercentage=75 -Dloader.path="services/" -Dspring.profiles.active=bundle ${JAVA_OPTS} -jar agp-application.jar
