@@ -3,51 +3,51 @@ kind: ConfigMap
 metadata:
   name: agp-configmap-default
 data:
-  server.port: "8089"
-  logging.config: /etc/agp/log4j2.xml
+  SERVER_PORT: "8089"
+  LOGGING_CONFIG: /etc/agp/log4j2.xml
 
   # Installation basepath
-  base.path: /opt/agp
+  BASE_PATH: /opt/agp
   
   # Hawtio
-  hawtio.authenticationEnabled: "false"
+  HAWTIO_AUTHENTICATIONENABLED: "false"
   
   # Camel spring-boot configurations
-  camel.springboot.message-history: "false"
-  camel.springboot.tracing: "false"
+  CAMEL_SPRINGBOOT_MESSAGE_HISTORY: "false"
+  CAMEL_SPRINGBOOT_TRACING: "false"
   
   # Total timeout for aggregated calls to producers
-  aggregate.timeout: "28000"
+  AGGREGATE_TIMEOUT: "28000"
   
   # Outpoing parameters for calling services
-  vp.instanceId: {{ .Values.skltp.instanceId }}
-  vp.defaultReceiveTimeout: "27000"
-  vp.defaultConnectTimeout: "2000"
-  vp.defaultServiceURL: http://vp:8080/vp
-  vp.useAyncHttpConduit: "true"
+  VP_INSTANCEID: {{ .Values.skltp.instanceId }}
+  VP_DEFAULTRECEIVETIMEOUT: "27000"
+  VP_DEFAULTCONNECTTIMEOUT: "2000"
+  VP_DEFAULTSERVICEURL: http://vp:8080/vp
+  VP_USEAYNCHTTPCONDUIT: "true"
   
   # Outgoing parameters for calling EI-FindContent
-  ei.logicalAddress: "5565594230"
-  ei.senderId: {{ .Values.skltp.instanceId }}
-  ei.findContentUrl: http://ei-backend:8082/skltp-ei/find-content-service/v1
-  ei.connectTimeout: "2000"
-  ei.receiveTimeout: "20000"
-  ei.useAyncHttpConduit: "true"
+  EI_LOGICALADDRESS: "5565594230"
+  EI_SENDERID: {{ .Values.skltp.instanceId }}
+  EI_FINDCONTENTURL: http://ei-backend:8082/skltp-ei/find-content-service/v1
+  EI_CONNECTTIMEOUT: "2000"
+  EI_RECEIVETIMEOUT: "20000"
+  EI_USEAYNCHTTPCONDUIT: "true"
   
   # Other services URLs
-  reset.cache.url: http://0.0.0.0:8091/resetcache
-  agp.status.url: http://0.0.0.0:8080/status
+  RESET_CACHE_URL: http://0.0.0.0:8091/resetcache
+  AGP_STATUS_URL: http://0.0.0.0:8080/status
   
   #Takcache configuration
-  takcache.use.behorighet.cache: "true"
-  takcache.use.vagval.cache: "false"
-  takcache.persistent.file.name: ${base.path}/localCache
-  takcache.endpoint.address: http://tak-services-svc:8080/tak-services/SokVagvalsInfo/v2
+  TAKCACHE_USE_BEHORIGHET_CACHE: "true"
+  TAKCACHE_USE_VAGVAL_CACHE: "false"
+  TAKCACHE_PERSISTENT_FILE_NAME: ${base.path}/localCache
+  TAKCACHE_ENDPOINT_ADDRESS: http://tak-services-svc:8080/tak-services/SokVagvalsInfo/v2
   
   # Max size of payload loggings
-  log.max.payload.size: "49152"
+  LOG_MAX_PAYLOAD_SIZE: "49152"
   
   # Service special configuration
-  getaggregatedrequestactivities.v1.receiveTimeout: "15000"
-  getaggregatedrequestactivities.v2.receiveTimeout: "15000"
-  getaggregatedsubjectofcareschedule.v1.receiveTimeout: "15000"
+  GETAGGREGATEDREQUESTACTIVITIES_V1_RECEIVETIMEOUT: "15000"
+  GETAGGREGATEDREQUESTACTIVITIES_V2_RECEIVETIMEOUT: "15000"
+  GETAGGREGATEDSUBJECTOFCARESCHEDULE_V1_RECEIVETIMEOUT: "15000"
