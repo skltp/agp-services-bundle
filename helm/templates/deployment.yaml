@@ -12,6 +12,7 @@ spec:
     metadata:
       annotations:
       labels:
+        app: agp
         app.kubernetes.io/name: agp
         elasticGrokFilter: {{ .Values.deployment.elasticGrokFilter }}
     spec:
