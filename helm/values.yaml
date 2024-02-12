@@ -3,7 +3,12 @@ repository: docker.drift.inera.se/ntjp/
 deployment:
   replicaCount: 1
   elasticGrokFilter: camel
-  memory: 2Gi
+  resources: #{} # The no-op curly-braces can optionally replace below sub-resources.
+    limits:
+      memory: 2Gi
+    requests:
+      cpu: 100m
+      memory: 2Gi
 
 skltp:
   instanceId: SKLTP-DEFAULT-ID
