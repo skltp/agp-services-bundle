@@ -257,7 +257,7 @@
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.financial.patientfees.exemption</groupId>
                   <artifactId>GetAggregatedRequestExemptionStatuses-v1-main</artifactId>
-                  <version>1.0.0-RC3</version>
+                  <version>1.0.0-RC4</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
