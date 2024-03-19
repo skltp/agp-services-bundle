@@ -9,8 +9,8 @@ data:
   # Installation basepath
   BASE_PATH: /opt/agp
   
-  # Hawtio
-  HAWTIO_AUTHENTICATIONENABLED: "false"
+  # Actuator
+  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health
   
   # Camel spring-boot configurations
   CAMEL_SPRINGBOOT_MESSAGE_HISTORY: "false"
