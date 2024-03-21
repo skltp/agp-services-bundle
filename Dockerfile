@@ -7,8 +7,7 @@ ENV BASE_DIR=/opt/agp/ \
 
 COPY target/ ${BASE_DIR}
 
-RUN mkdir -p ${LOG_DIR} \
-  && adduser -DH  -h ${BASE_DIR} -u 1000 ${APP_USER}
+RUN adduser -DH  -h ${BASE_DIR} -u 1000 ${APP_USER}
 
 WORKDIR ${BASE_DIR}
 USER ${APP_USER}
