@@ -41,7 +41,7 @@ data:
   #Takcache configuration
   TAKCACHE_USE_BEHORIGHET_CACHE: "true"
   TAKCACHE_USE_VAGVAL_CACHE: "false"
-  TAKCACHE_PERSISTENT_FILE_NAME: ${base.path}/localCache
+  TAKCACHE_PERSISTENT_FILE_NAME: /dev/null
   TAKCACHE_ENDPOINT_ADDRESS: http://tak-services-svc:8080/tak-services/SokVagvalsInfo/v2
   
   # Max size of payload loggings
