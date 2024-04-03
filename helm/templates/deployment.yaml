@@ -23,6 +23,10 @@ spec:
       imagePullSecrets:
         - name: regcred
       terminationGracePeriodSeconds: 90
+      {{- with .Values.deployment.topologySpreadConstraints }}
+      topologySpreadConstraints:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
       containers:
         - name: agp
           image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
