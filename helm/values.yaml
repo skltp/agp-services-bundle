@@ -4,6 +4,13 @@ deployment:
   replicaCount: 1
   elasticGrokFilter: camel
   resources: {} # Override to specify resources
+  topologySpreadConstraints:
+    - labelSelector:
+        matchLabels:
+          app: agp
+      maxSkew: 2
+      topologyKey: kubernetes.io/hostname
+      whenUnsatisfiable: ScheduleAnyway
 
 skltp:
   instanceId: SKLTP-DEFAULT-ID
