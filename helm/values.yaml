@@ -2,6 +2,7 @@ repository: docker.drift.inera.se/ntjp/
 
 deployment:
   replicaCount: 1
+  imagePullPolicy: Always
   elasticGrokFilter: camel
   resources: {} # Override to specify resources
   topologySpreadConstraints:
