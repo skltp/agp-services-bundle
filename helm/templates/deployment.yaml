@@ -30,6 +30,7 @@ spec:
       containers:
         - name: agp
           image: "{{ .Values.repository }}agp-services-bundle:{{ .Chart.AppVersion }}"
+          imagePullPolicy: {{ .Values.deployment.imagePullPolicy }}
           volumeMounts:
             - mountPath: /etc/agp
               name: log4j
