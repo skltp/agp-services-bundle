@@ -6,7 +6,7 @@
 
   <groupId>se.skltp.agp</groupId>
   <artifactId>agp-services-bundle</artifactId>
-  <version>3.2.1.4-RC2-SNAPSHOT</version>
+  <version>3.2.2.0-SNAPSHOT</version>
   <description>AgP application with aggregating services</description>
   <name>agp-services-bundle</name>
 
@@ -88,7 +88,7 @@
                 <artifactItem>
                   <groupId>se.skltp.agp</groupId>
                   <artifactId>agp-application</artifactId>
-                  <version>3.2.1</version>
+                  <version>3.2.2-RC1</version>
                   <classifier>exec</classifier>
                   <destFileName>agp-application.jar</destFileName>
                 </artifactItem>
