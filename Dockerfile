@@ -1,15 +1,15 @@
-FROM openjdk:11-oraclelinux8
+FROM eclipse-temurin:11-jre-alpine
 
 ENV BASE_DIR=/opt/agp/ \
-    USER=ind-app \
-    LOG_DIR=/var/log/
+    APP_USER=ind-app \
+    LOG_DIR=/var/log/ \
+    TZ=Europe/Stockholm
 
 COPY target/ ${BASE_DIR}
 
-RUN mkdir -p ${LOG_DIR} \
-  && useradd -Ms /bin/bash -b ${BASE_DIR} -u 556559423 ${USER} \
-  && chown ${USER}:${USER} -R ${BASE_DIR} ${LOG_DIR}
+RUN adduser -DH  -h ${BASE_DIR} -u 1000 ${APP_USER}
 
 WORKDIR ${BASE_DIR}
-USER ${USER}
-CMD java -Dloader.path="services/" -Dspring.profiles.active=bundle -jar agp-application.jar
+USER ${APP_USER}
+# A few args are default, but feel free to add more using JAVA_OPTS
+CMD java -XX:MaxRAMPercentage=75 -Dloader.path="services/" -Dspring.profiles.active=bundle ${JAVA_OPTS} -jar agp-application.jar

@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ .Values.vip.name }}
+spec:
+  selector:
+    app.kubernetes.io/name: agp
+  type: ClusterIP
+  ports:
+    {{- range $.Values.aggServices.ports }}
+    - port: {{ . }}
+      targetPort: aggservices
+      protocol: TCP
+      name: {{ quote . }}
+    {{- end }}
+
+status:
+  loadBalancer: {}
