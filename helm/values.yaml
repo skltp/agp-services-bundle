@@ -49,7 +49,7 @@ probes:
   startupProbe:
     httpGet:
       path: actuator/health/readiness
-      port: 8089
+      port: actuators
       scheme: HTTP
     initialDelaySeconds: 30
     periodSeconds: 5  # 30s initial + 18 failures * 5s period = 120 seconds max startup before failure and restart.
@@ -59,7 +59,7 @@ probes:
   livenessProbe:
     httpGet:
       path: actuator/health/liveness
-      port: 8089
+      port: actuators
       scheme: HTTP
     initialDelaySeconds: 10
     periodSeconds: 10
@@ -71,7 +71,7 @@ probes:
   readinessProbe:
     httpGet:
       path: actuator/health/readiness
-      port: 8089
+      port: actuators
       scheme: HTTP
     # lower initial delay than liveness, but same period, allows traffic to be governed before liveness is tested.
     initialDelaySeconds: 9

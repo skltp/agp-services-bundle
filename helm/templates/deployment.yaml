@@ -41,6 +41,8 @@ spec:
               name: status
             - containerPort: 8091
               name: reset-cache
+            - containerPort: 8089
+              name: actuators
           lifecycle:
             preStop:
               exec:
