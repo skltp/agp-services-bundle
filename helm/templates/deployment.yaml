@@ -15,6 +15,7 @@ spec:
         app: agp
         app.kubernetes.io/name: agp
         elasticGrokFilter: {{ .Values.deployment.elasticGrokFilter }}
+        monitoring: prometheus
     spec:
       volumes:
         - name: log4j
