@@ -10,7 +10,7 @@ data:
   BASE_PATH: /opt/agp
   
   # Actuator
-  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health
+  MANAGEMENT_ENDPOINTS_WEB_EXPOSURE_INCLUDE: health,metrics,prometheus
   
   # Camel spring-boot configurations
   CAMEL_SPRINGBOOT_MESSAGE_HISTORY: "false"
