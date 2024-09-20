@@ -6,7 +6,7 @@
 
   <groupId>se.skltp.agp</groupId>
   <artifactId>agp-services-bundle</artifactId>
-  <version>3.3.0.0-SNAPSHOT</version>
+  <version>4.0.0.0-SNAPSHOT</version>
   <description>AgP application with aggregating services</description>
   <name>agp-services-bundle</name>
 
@@ -88,7 +88,7 @@
                 <artifactItem>
                   <groupId>se.skltp.agp</groupId>
                   <artifactId>agp-application</artifactId>
-                  <version>3.3.0-SNAPSHOT</version>
+                  <version>4.0.0-RC1</version>
                   <classifier>exec</classifier>
                   <destFileName>agp-application.jar</destFileName>
                 </artifactItem>
@@ -111,153 +111,153 @@
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activity.actions</groupId>
                   <artifactId>GetAggregatedActivities-v1-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activityprescription.actoutcome</groupId>
                   <artifactId>GetAggregatedMedicationHistory-v2-main</artifactId>
-                  <version>2.2.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activityprescription.actoutcome</groupId>
                   <artifactId>GetAggregatedVaccinationHistory-v1-main</artifactId>
-                  <version>1.1.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.activityprescription.actoutcome</groupId>
                   <artifactId>GetAggregatedVaccinationHistory-v2-main</artifactId>
-                  <version>3.2.0</version>
+                  <version>4.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedECGOutcome-v1-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedImagingOutcome-v1-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedLaboratoryOrderOutcome-v3-main</artifactId>
-                  <version>1.1.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedLaboratoryOrderOutcome-v4-main</artifactId>
-                  <version>3.1.0</version>
+                  <version>4.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedMaternityMedicalHistory-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.actoutcome</groupId>
                   <artifactId>GetAggregatedReferralOutcome-v3-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>	se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.basic</groupId>
                   <artifactId>GetAggregatedObservations-v1-main</artifactId>
-                  <version>2.2.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedAlertInformation-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedAlertInformation-v3-main</artifactId>
-                  <version>1.0.0-RC2</version>
+                  <version>1.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedCareDocumentation-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedCareDocumentation-v3-main</artifactId>
-                  <version>1.0.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedDiagnosis-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.healthcond.description</groupId>
                   <artifactId>GetAggregatedFunctionalStatus-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.logistics.logistics</groupId>
                   <artifactId>GetAggregatedCareContacts-v2-main</artifactId>
-                  <version>3.1.0</version>
+                  <version>4.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.logistics.logistics</groupId>
                   <artifactId>GetAggregatedCareContacts-v3-main</artifactId>
-                  <version>1.1.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.clinicalprocess.logistics.logistics</groupId>
                   <artifactId>GetAggregatedCarePlans-v2-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>	se.skltp.aggregatingservices.riv.crm.requeststatus</groupId>
                   <artifactId>GetAggregatedRequestActivities-v1-main</artifactId>
-                  <version>3.1.0</version>
+                  <version>4.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
                 <artifactItem>
                   <groupId>	se.skltp.aggregatingservices.riv.crm.requeststatus</groupId>
                   <artifactId>GetAggregatedRequestActivities-v2-main</artifactId>
-                  <version>1.0.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.crm.scheduling</groupId>
                   <artifactId>GetAggregatedSubjectOfCareSchedule-v1-main</artifactId>
-                  <version>2.1.0</version>
+                  <version>3.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
                 <artifactItem>
                   <groupId>se.skltp.aggregatingservices.riv.financial.patientfees.exemption</groupId>
                   <artifactId>GetAggregatedRequestExemptionStatuses-v1-main</artifactId>
-                  <version>1.0.0</version>
+                  <version>2.0.0-SNAPSHOT</version>
                   <classifier>all</classifier>
                 </artifactItem>
 
